@@ -1,0 +1,60 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=THD 4000 Series Components.LibPkg
+[Project2]
+ProjectPath=THD 7400 Series Components.LibPkg
+[Project3]
+ProjectPath=THD Amplifiers.LibPkg
+[Project4]
+ProjectPath=THD Buttons.LibPkg
+[Project5]
+ProjectPath=THD Connectors.LibPkg
+[Project6]
+ProjectPath=THD Crystals.LibPkg
+[Project7]
+ProjectPath=THD Discrete Semiconductors.LibPkg
+[Project8]
+ProjectPath=THD Micro Controllers.LibPkg
+[Project9]
+ProjectPath=THD Miscellaneous Components.LibPkg
+[Project10]
+ProjectPath=THD Opto Components.LibPkg
+[Project11]
+ProjectPath=THD Passive Components.LibPkg
+[Project12]
+ProjectPath=THD Sensors.LibPkg
+[Project13]
+ProjectPath=THD Specific Components.LibPkg
+[Project14]
+ProjectPath=THD Voltage Reference and Regulators.LibPkg
+[Project15]
+ProjectPath=SMD 4000 Series Components.LibPkg
+[Project16]
+ProjectPath=SMD 7400 Series Components.LibPkg
+[Project17]
+ProjectPath=SMD Amplifiers.LibPkg
+[Project18]
+ProjectPath=SMD Buttons.LibPkg
+[Project19]
+ProjectPath=SMD Connectors.LibPkg
+[Project20]
+ProjectPath=SMD Crystals.LibPkg
+[Project21]
+ProjectPath=SMD Discrete Semiconductors.LibPkg
+[Project22]
+ProjectPath=SMD Micro Controllers.LibPkg
+[Project23]
+ProjectPath=SMD Miscellaneous Components.LibPkg
+[Project24]
+ProjectPath=SMD Opto Components.LibPkg
+[Project25]
+ProjectPath=SMD Passive Components.LibPkg
+[Project26]
+ProjectPath=SMD Sensors.LibPkg
+[Project27]
+ProjectPath=SMD Specific Components.LibPkg
+[Project28]
+ProjectPath=SMD Voltage Reference and Regulators.LibPkg
+[Project29]
+ProjectPath=HYB Modules.LibPkg
