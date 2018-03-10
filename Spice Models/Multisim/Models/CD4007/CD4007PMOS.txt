@@ -1,0 +1,51 @@
+.SUBCKT CD4007PMOS 1 2 3 4 
+
+* MOSFET DR GT SRC SUBS MODEL L    W
+M1       1  2  3   4    CMOSP W=60u L=1.5u
+
+.MODEL CMOSP PMOS (      ;INTCAP    = 1          TEMPLEV   = 2
++;ACM      = 2        
++LEVEL     = 8       TNOM      = 21
++BINUNIT  = 0        MOBMOD    = 1          ;VERSION   = 3.1
++CAPMOD   = 2        NOIMOD    = 1          XPART     = 0
++;HDIF     = 8.00E-07 
++;NQSMOD    = 0
++CGBO     = 3E-10    K1        = 5.4E-01    TOX       = 1.39E-08
++CGDO     = 3E-10    K2        = 0.00504    U0        = 257.72
++CGSO     = 2.5E-10  LINT      = 3.80E-08   VTH0      = -0.9581
++CJ       = 0.00069  NCH       = 5E+16      WINT      = 0.000000227
++CJSW     = 3.5E-10  RDSW      = 2140       XJ        = 1.50E-07
++JS       = 0.006    
++RSH       = 90
++A0       = 0.9232   DVT1W     = 1.13E+05   PDIBLCB   = 0.00971
++A1       = 2.51E-05 DVT2      = -0.00836   PRWB      = -0.001
++A2       = 0.4095   DVT2W     = -1.00E-06  PRWG      = -0.00000105
++AGS      = 0.1672   DWB       = 1.13E-08   PSCBE1    = 10000000000
++ALPHA0   = 0        DWG       = -1.31E-08  PSCBE2    = 4.40E-04
++B0       = 1.71E-06 ETA0      = 0.0482     PVAG      = 0.5561
++B1       = 3.20E-06 ETAB      = 0          UA        = 3.6E-09
++BETA0    = 0        K3        = 26.991     UB        = 6.8E-21
++CDSC     = 0        K3B       = -5.241     UC        = -7.2E-11
++CDSCB    = 1.14E-03 KETA      = -0.00086   VOFF      = -0.1626
++CDSCD    = 9.50E-05 LU0       = 0          VSAT      = 1.50E+05
++CIT      = 0        LVSAT     = 0          W0        = 1.48E-06
++DELTA    = 0.01     LWL       = 3.14E-20   WR        = 1
++DROUT    = 0.0508   NFACTOR   = 1.244      WU0       = 0
++DSUB     = 0.34     NLX       = 4.30E-07   WVSAT     = 0
++DVT0     = 2.706    PCLM      = 2.412      WWL       = 4.7E-21
++DVT0W    = 0.1067   PDIBLC1   = 0.00406
++DVT1     = 0.4264   PDIBLC2   = 0.00044
++AT       = 0        
++NJ         = 2.2        
++UC1       = -1E-10
++KT1      = -0.4951  PRT       = 0          UTE       = -1.481
++KT1L     = 0        UA1       = 6.6E-10    XTI       = 3
++KT2      = -0.0537  UB1       = -5.5E-18
++CF       = 0        CLC       = 1.00E-07   MJSW      = 0.315
++CGDL     = 0        CLE       = 0.6        PB        = 0.905
++CGSL     = 0        ELM       = 5          PBSW      = 0.901
++CKAPPA   = 0.6      MJ        = 0.5        
++;TT        = 5.3E-09
++AF       = 2        KF        = 2.00E-25   )
+
+.ENDS CD4007PMOS

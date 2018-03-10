@@ -1,0 +1,5 @@
+.MODEL CD4007PMOS    PMOS
++ Level=1 Gamma=0 
++ Tox=1200n Phi=.6 Rs=0 Kp=55u Vto=1.5
++ Lambda=0.04 Rd=0 Cbd=4.0p Cbs=4.0p
++ Pb=.8 Cgso=0.2p Cgdo=0.2p Is=16.64p N=1

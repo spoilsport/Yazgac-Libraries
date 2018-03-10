@@ -1,0 +1,35 @@
+.SUBCKT LM3086 1c 1b 1e2e 2b 2c 3b 3e 3c 4b 4e 4c 5b 5e 5c
+ 
+*Qxxx C B E type
+Q1 1c 1b 1e2e LM3086NPN
+Q2 2c 2b 1e2e LM3086NPN 
+Q3 3c 3b 3e LM3086NPN
+Q4 4c 4b 4e LM3086NPN
+Q5 5c 5b 5e LM3086NPN 
+
+* LM3086/LM3018 NPN model
+* created using Parts release 6.3a on 02/15/97 at 16:18
+* Parts is a MicroSim product.
+.MODEL LM3086NPN NPN
++ IS=10.000E-15
++ BF=156.66
++ VAF=100
++ IKF=36.783E-3
++ ISE=114.82E-15
++ NE=1.4743
++ BR=.1001
++ VAR=100
++ IKR=10.010E-3
++ ISC=10.000E-15
++ RC=10
++ CJE=1.0260E-12
++ MJE=.33333
++ CJC=991.79E-15
++ MJC=.33333
++ TF=278.55E-12
++ XTF=91.905
++ VTF=18.899
++ ITF=.77631
++ TR=10.000E-9
+
+.ENDS LM3086

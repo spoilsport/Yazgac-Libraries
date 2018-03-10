@@ -1,0 +1,106 @@
+*                  IN OUT V+ V-
+.SUBCKT 7WxL1SCHMITT 1  2   3  4 
+* MOSFET DR GT SRC SUBS MODEL L    W
+*M1       2  1  3   3    CMOSP W=60u L=1.5u
+*M2       2  1  4   4    CMOSN W=30u L=1.5u
+
+M1       1d  1  4   NC1   CMOSN W=10u L=1u
+M2       2   1  1d  NC2   CMOSN W=10u L=1u
+M3       1d  2  3   NC3   CMOSN W=22.5u L=1u
+
+M4       2   1  4d  NC4   CMOSP W=20u L=1u
+M5       4d  1  3   NC5   CMOSP W=26u L=1u
+M6       4   2  4d  NC6   CMOSP W=20u L=1u
+
+.MODEL CMOSN NMOS (      ;INTCAP    = 1          TEMPLEV   = 2
++;ACM      = 2        
++LEVEL     = 8       TNOM      = 21
++BINUNIT  = 0        MOBMOD    = 1          ;VERSION   = 3.1
++CAPMOD   = 2        NOIMOD    = 1          XPART     = 0
++;HDIF     = 8.00E-07 
++;NQSMOD    = 0
++CGBO     = 3E-10    K1        = 8.8E-01    TOX       = 1.35E-08
++CGDO     = 3E-10    K2        = -0.1127    U0        = 503.71
++CGSO     = 2.5E-10  LINT      = 2.70E-08   VTH0      = 0.655
++CJ       = 0.00047  NCH       = 1.5E+17    WINT      = 1.00E-07
++CJSW     = 3.3E-10  RDSW      = 1560       XJ        = 1.50E-07
++JS       = 0.03     
++RSH       = 90
++A0       = 0.8201   DVT1W     = 5.20E+07   PDIBLCB   = 0.0854
++A1       = 0        DVT2      = -0.00392   PRWB      = 0.2205
++A2       = 1        DVT2W     = -0.001     PRWG      = -4.40E-06
++AGS      = 0.1928   DWB       = 9.4E-09    PSCBE1    = 5.50E+08
++ALPHA0   = 0        DWG       = -9.00E-09  PSCBE2    = 3.40E-05
++B0       = 1.62E-06 ETA0      = 0.2321     PVAG      = 0.1013
++B1       = 1.83E-06 ETAB      = -0.0158    UA        = 3.4E-14
++BETA0    = 0        K3        = 62.068     UB        = 2.02E-18
++CDSC     = -0.00649 K3B       = -29.643    UC        = 2.97E-11
++CDSCB    = -0.00132 KETA      = -0.00769   VOFF      = -0.1381
++CDSCD    = 0.00074  LU0       = 4.40E-05   VSAT      = 1.05E+05
++CIT      = 0        LVSAT     = -0.00249   W0        = 1.20E-06
++DELTA    = 0.01     LWL       = -1.79E-19  WR        = 1
++DROUT    = 0.00191  NFACTOR   = 0.7187     WU0       = -3.02E-05
++DSUB     = 0.5356   NLX       = 1.56E-07   WVSAT     = -0.00719
++DVT0     = 9.49     PCLM      = 1.507      WWL       = -7.5E-20
++DVT0W    = 1.997    PDIBLC1   = 1.11E-03
++DVT1     = 0.4585   PDIBLC2   = 8.60E-04
++AT       = 19000    
++NJ         = 2.2        
++UC1       = 1.38E-11
++KT1      = -0.391   PRT       = 647.67     UTE       = -1.757
++KT1L     = 2.39E-08 UA1       = 2.92E-10   XTI       = 3
++KT2      = -0.0752  UB1       = -4.6E-19
++CF       = 0        CLC       = 1.00E-07   MJSW      = 0.336
++CGDL     = 0        CLE       = 0.6        PB        = 0.897
++CGSL     = 0        ELM       = 5          PBSW      = 0.892
++CKAPPA   = 0.6      MJ        = 0.3375     
++;TT        = 0.000000016
++AF       = 1        KF        = 2.00E-27   )
+*
+.MODEL CMOSP PMOS (      ;INTCAP    = 1          TEMPLEV   = 2
++;ACM      = 2        
++LEVEL     = 8       TNOM      = 21
++BINUNIT  = 0        MOBMOD    = 1          ;VERSION   = 3.1
++CAPMOD   = 2        NOIMOD    = 1          XPART     = 0
++;HDIF     = 8.00E-07 
++;NQSMOD    = 0
++CGBO     = 3E-10    K1        = 5.4E-01    TOX       = 1.39E-08
++CGDO     = 3E-10    K2        = 0.00504    U0        = 257.72
++CGSO     = 2.5E-10  LINT      = 3.80E-08   VTH0      = -0.9581
++CJ       = 0.00069  NCH       = 5E+16      WINT      = 0.000000227
++CJSW     = 3.5E-10  RDSW      = 2140       XJ        = 1.50E-07
++JS       = 0.006    
++RSH       = 90
++A0       = 0.9232   DVT1W     = 1.13E+05   PDIBLCB   = 0.00971
++A1       = 2.51E-05 DVT2      = -0.00836   PRWB      = -0.001
++A2       = 0.4095   DVT2W     = -1.00E-06  PRWG      = -0.00000105
++AGS      = 0.1672   DWB       = 1.13E-08   PSCBE1    = 10000000000
++ALPHA0   = 0        DWG       = -1.31E-08  PSCBE2    = 4.40E-04
++B0       = 1.71E-06 ETA0      = 0.0482     PVAG      = 0.5561
++B1       = 3.20E-06 ETAB      = 0          UA        = 3.6E-09
++BETA0    = 0        K3        = 26.991     UB        = 6.8E-21
++CDSC     = 0        K3B       = -5.241     UC        = -7.2E-11
++CDSCB    = 1.14E-03 KETA      = -0.00086   VOFF      = -0.1626
++CDSCD    = 9.50E-05 LU0       = 0          VSAT      = 1.50E+05
++CIT      = 0        LVSAT     = 0          W0        = 1.48E-06
++DELTA    = 0.01     LWL       = 3.14E-20   WR        = 1
++DROUT    = 0.0508   NFACTOR   = 1.244      WU0       = 0
++DSUB     = 0.34     NLX       = 4.30E-07   WVSAT     = 0
++DVT0     = 2.706    PCLM      = 2.412      WWL       = 4.7E-21
++DVT0W    = 0.1067   PDIBLC1   = 0.00406
++DVT1     = 0.4264   PDIBLC2   = 0.00044
++AT       = 0        
++NJ         = 2.2        
++UC1       = -1E-10
++KT1      = -0.4951  PRT       = 0          UTE       = -1.481
++KT1L     = 0        UA1       = 6.6E-10    XTI       = 3
++KT2      = -0.0537  UB1       = -5.5E-18
++CF       = 0        CLC       = 1.00E-07   MJSW      = 0.315
++CGDL     = 0        CLE       = 0.6        PB        = 0.905
++CGSL     = 0        ELM       = 5          PBSW      = 0.901
++CKAPPA   = 0.6      MJ        = 0.5        
++;TT        = 5.3E-09
++AF       = 2        KF        = 2.00E-25   )
+*
+
+.ENDS 7WxL1SCHMITT
