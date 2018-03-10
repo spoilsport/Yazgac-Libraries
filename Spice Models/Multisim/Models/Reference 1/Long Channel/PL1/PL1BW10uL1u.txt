@@ -1,0 +1,39 @@
+.SUBCKT PL1BW10uL1u 1 2 3 
+
+* Description:
+*     Reference 1, PMOS,
+*     Long Channel
+*     Width=10u, Length=1u
+
+* Spice Models for Yazgac Research Devices - Oktay Yazgac - 2017.4.20 
+
+* MOSFET DR GT SRC SUBS MODEL L    W
+M1       1  2  3   NC   CMOSP L=1u W=10u
+
+* Reference 1. 
+*   Baker, R. Jacob, 1964-
+*   CMOS : circuit design, layout, and simulation / R. Jacob Baker. — 3rd ed.
+*   IEEE Press, IEEE Series on Microelectronic Systems
+*   A JOHN WILEY & SONS, INC., Publication
+*   ISBN 978-0-470-88132-3
+
+* The SPICE models used in this book for the "long-channel CMOS process" follow. 
+* The scale factor is 1 um (= minimum drawn channel length).
+
+* Long-Channel, P-Channel, MOSFET Models
+
+* 1 micrometre Level 3 models
+* Don't forget the .options scale=1u if using an Lmin of 1 1<L<200 and 10<W<10000 Vdd=5V
+
+.MODEL CMOSP PMOS LEVEL = 3
++ TOX = 200E-10     NSUB = 1E17     GAMMA = 0.6
++ PHI = 0.7         VTO = -0.9      DELTA = 0.1
++ UO = 250          ETA = 0         THETA = 0.1
++ KP = 40E-6        VMAX = 5E4      KAPPA = 1
++ RSH = 0           NFS = 1E12      TPG = -1
++ XJ = 500E-9       LD = 100E-9
++ CGDO = 200E-12    CGSO = 200E-12  CGBO = 1E-10
++ CJ = 400E-6       PB = 1          MJ = 0.5
++ CJSW =300E-12     MJSW = 0.5
+*
+.ENDS PL1BW10uL1u

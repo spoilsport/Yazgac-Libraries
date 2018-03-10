@@ -1,0 +1,42 @@
+
+##################  Model Data Report  ##################
+
+============= SPICE Model =================
+* OPTO TRIAC
+* OY  8/10/2004
+* MOC3021  I_trig=8mA
+*  D+  D-  MT2  MT1
+.SUBCKT MOC3021 A K MT2 MT1 PARAMS:
++ Itrig=8m
++ RH1=20k
++ RH2=20k
++ RH3=16.7k
+Q2 vb1 vb1p vd1 0 PNP1
+Q1 vb1p vb1 MT1 0 NPN1
+R3 vb1 MT1 {RH2}
+** D1 A K DL
+D1 A AKaux DL
+VTAux AKAux K 0
+R1 ctrl1 MT1 1
+C1 ctrl1 MT1 10µ
+R2 ctrl1 vb1 {RH1}
+R4 vd1 vb1p {RH3}
+*** B1 ctrl1 MT1 I=-500*I(D1)*3m/Itrig
+B1 ctrl1 MT1 I=-500*I(VTAux)*3m/Itrig 
+*** BFX 5 4 I=0+0.00091067*I(VT)+1.2307*I(VT)*I(VT)
+R6 vd2 vb2 {RH2}
+D3 vd2 MT2 D1
+Q3 vb2 vb2p MT1 0 PNP1
+Q4 vb2p vb2 vd2 0 NPN1
+E1 vd2 N001 ctrl1 MT1 -1
+R5 N001 vb2 {RH1}
+R7 vb2p MT1 {RH3}
+D2 MT2 vd1 D1
+R34 MT2 MT1 100MEG
+.MODEL PNP1 PNP(Is=1e-15 BF=10 Cjc=10p Cje=20p Tf=0.1u Ise=1e-12)
+.MODEL NPN1 NPN(Is=1e-15 BF=10 Cjc=10p Cje=20p Tf=0.1u Ise=1e-12)
+.MODEL D1 D(Is=0.1u Rs=2 Cj0=50p)
+.MODEL DL D(Is=1e-20 Rs=5)
+.ENDS
+============= Model template =================
+x%p %tA %tK %tMT2 %tMT1 %m
