@@ -1,0 +1,23 @@
+
+Derived MOSFET Naming Conventions
+
+    [ N | P ] [ <nil> | S | L ] <reference number> <type> W <Width> L <Length>
+
+    N : NMOS
+    P : PMOS
+    <nil> : unknown channel type
+    S : Short Channel
+    L : Long Channel
+    <refernce number> : reference document number
+    <type> :
+        A : 4 pin
+        B : 3 pin - bulk left floating
+        C : 3 pin - bulk connected to source
+    W : prefix for Width
+    <Width> : Width
+    L : prefix for Length
+    <Length> : Length
+
+    Example:
+       N1W30uL1u            - NMOS, Reference 1, 
+       PL1W100uL2u          - PMOS, Long Channel, Reference 1, Width=100um, Length=2um

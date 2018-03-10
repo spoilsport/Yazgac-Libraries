@@ -1,0 +1,6 @@
+Reference 1. 
+    Baker, R. Jacob, 1964-
+    CMOS : circuit design, layout, and simulation / R. Jacob Baker. — 3rd ed.
+    IEEE Press, IEEE Series on Microelectronic Systems
+    A JOHN WILEY & SONS, INC., Publication
+    ISBN 978-0-470-88132-3
