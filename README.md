@@ -2,8 +2,7 @@ Yazgac - Altium Libraries
 
 This component library is a library I use in my research work
 
-It is free to use in research studies.
-But I'm glad, if you give me information about your use,
+It is free to use in research studies. But, if you inform me anyway, I will be glad.
 
 However, if you use it for a commercial product, it is imperative that you obtain permission under all circumstances.
 
